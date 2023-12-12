@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Stylish',Arial, Helvetica, sans-serif;
+}
+
+:root{
+--TextColor: #08dd7a;
+}
+
+/* rgb(228, 11, 156) */
+body{
+    background-color: black;
+    color: white;
+    font-family: 'poppins','sans serif';
+}
+
+#top{
+    background-color: var(--TextColor);
+    font-size: 2em;
+    border-radius: 50%;
+    padding: 0.6em ;
+    position: absolute;
+    top: 85vh;
+    left: 90vw;
+    position: sticky;
+    transition: 0.4s;
+}
+
+#top i{
+    color: black;
+}
+
+#top:hover{
+    transform: scale(1.2);
+    background-color: aliceblue;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 6rem;
+}
+
+nav h1{
+    font-size: 2em;
+}
+nav h1 span{
+    color: var(--TextColor);
+    
+}
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+list-style: none;
+padding: 0.5em 1.5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;    
+    text-transform: uppercase;
+    padding: 0.5em.2em;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid var(--TextColor);
+
+}
+
+#navbar-toggle{
+    display: none;
+}
+
+.navbar-burger{
+    display: none;
+}
+
+
+@media screen and (max-width:700px) {
+    nav{
+        background-color: var(--btn-color);        
+        padding: 2em 1em ;
+    }
+    nav ul{
+        display: none;
+        position: relative;
+        top: 5em;
+        left: 0em;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--TextColor);
+        margin: 0;
+        border-radius: 1em;
+        border: 2px solid black;
+        outline: #02c8ff;
+        transition: 0.5s;
+    }
+    nav ul li{
+        margin: 1.2em 0;
+        padding: 0.5em 0 ;
+    }
+
+    nav ul li:hover{
+        border-bottom: 1px solid var(--TextColor);
+    }
+    #navbar-toggle{
+        display: none;
+        cursor: pointer;
+    }
+    .navbar-burger{
+        display: block;
+        order: 1;
+        margin-top: 0.5em;
+    }
+    #navbar-toggle:checked + ul{
+        display: block;
+        width: 100%;
+        left: -2em;
+
+    }
+}
+
+#hero{
+    display: flex;
+    max-width: 100%;
+    padding: 3em 0;
+}
+
+#hero-text{
+    width: 60%;
+    padding: 7% 10%;
+}
+
+#hero-text h1{
+    font-size: 2.9em;
+    margin: 0.4em 0;
+}
+#hero-text h2{
+    color: rgb(191, 200, 209);
+    font-size: 2em;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+}
+
+#hero-text h1 span{
+    color: var(--TextColor);
+}
+#hero-text button a{
+    text-decoration: none;
+    color: white;
+    padding: inherit;
+}
+#hero-text button{
+    display: inline-block;
+    padding: 1em;
+    margin-top: 1em;
+    margin-right: 2em;
+    border: none;
+    outline: none;
+    background-color: black;
+    border: 2px solid var(--TextColor);
+    border-radius: 0.5em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#hero-text button:hover{
+    background-color: var(--TextColor);
+}
+
+#hero-img{
+    max-width: 40%;
+    padding-top: 1em;
+    padding-right: 3em;
+}
+
+#hero-img img{
+    width: 100%;
+}
+
+@media screen and (max-width:700px) {
+    #hero{
+        flex-direction: column;
+    }
+
+    #hero-text{
+        width: 100%;
+    }
+    #hero-img{
+        max-width: 100%;
+    }
+}
+
+
+#about > h1{
+    text-align: center;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+#about-section-1{
+    display: flex;
+}
+
+#biography{
+    padding-top: 5em;
+}
+
+#biography h1{
+    font-size: 3em;
+    color: var(--TextColor);
+}
+
+#biography h2{
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+#biography p{
+    font-size: 1.2em;
+    padding-bottom: 2em;
+    width: 80%;
+    text-align: justify;
+}
+
+#about-section-1 img{
+    width: 100%;
+
+}
+
+
+#about-profile{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    border: 1px solid var(--TextColor);
+    border-radius: 2em;
+    padding: 1em;
+    width: 80%;
+}
+
+#about-profile div {
+margin: 1em;
+}
+
+#about-profile div h2{
+    color: var(--TextColor);
+}
+
+progress {
+    width: 80%;
+    height: 0.5em;
+    border-radius: 10px;
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: var(--TextColor); 
+  }
+  
+  #about-section-2{
+    width: 100%;
+    display: flex;
+    padding: 2em 0;
+  }  
+
+  #about-section-2 .progress{
+    width: 100%;
+    margin: 2em;
+    padding: 0 5em;
+  }
+
+  .progress div{
+    margin: 2em;
+  }
+
+  @media screen and (max-width:700px) {
+    #about-section-1{
+        flex-direction: column-reverse;
+    }
+
+    #about-profile{
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 2em;
+    }
+
+    #about-section-2{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #about-section-2 .progress{
+        margin: 0;
+        padding: 1em ;
+    }
+
+    #biography{
+        padding: 2em 1.5em;
+    }
+
+    #biography p{
+        width: 100%;
+    }
+    progress{
+        width: 90%;
+    }
+  }
+
+#services > h1{
+    text-align: center;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+
+.services-cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5em 0;
+}
+.card{
+    width: 25%;
+    padding: 2em;
+    background-color: rgb(53, 54, 54);
+    border-radius: 1em;
+    transition: 0.5s;
+}
+.card:hover{
+    background-color: var(--TextColor);
+}
+.card i{
+    font-size: 2em;
+    padding: 0.5em 0;
+}
+
+.card h1{
+    padding-bottom: 0.5em;
+}
+
+.card p{
+    padding-bottom: 1em;
+    text-align: justify;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card button{
+    padding: 1em 1.5em;
+    background-color: var(--TextColor);
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    border: 2px solid black;
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: black;
+    border: 2px solid var(--TextColor);
+    color: white;    
+}
+
+
+
+@media screen and (max-width:700px) {
+    .services-cards{
+        flex-direction: column;
+        margin: 1em;
+    }
+    .card{
+        width: 100%;
+        margin: 2em 0;
+    }
+}
+
+
+.portfolio-card div{
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio-card div img{
+    width: 100%;
+    height: 30vh;
+    border-radius: 1em;
+    
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+#portfolio > h1{
+    text-align: center;
+    font-size: 3em;
+    margin: 1em;
+}
+
+
+.portfolio-card{
+    width: 25%;
+    height: 100%;
+    background-color: rgb(53, 54, 54);
+    border-radius: 1em;
+    margin: 4em 0;
+    transition: 0.6s ease-in-out;
+}
+
+
+
+.portfolio-text h4{
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.portfolio-card p{
+margin-top: 1em;
+}
+
+.portfolio-card button{
+    padding: 1.2em 3em;
+    background-color: var(--TextColor);
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    border: 2px solid black;
+    transition: 0.3s;
+    margin: 1em 0;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    color: white;
+    cursor: pointer;
+}
+
+.portfolio-card button:hover{
+    background-color: black;
+    border: 2px solid var(--TextColor);
+    color: white;    
+}
+
+
+.portfolio-card .portfolio-text{
+    width: 100%;   
+    padding: 1em;
+}
+
+.portfolio-text:hover{
+    transition: 0.3s ease-in-out;
+    background-color: var(--TextColor);
+    border-radius: 1em;
+}
+#portfolio > button{
+    display: block;
+    padding: 1.2em 3em;
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    margin: 0 auto;
+    background-color: black;
+    border: 2px solid var(--TextColor);
+    color: white;
+    cursor: pointer;
+}
+#portfolio > button:hover{
+    border: 2px solid black;
+    background-color: var(--TextColor);
+    color: white;
+}
+
+@media screen and (max-width:700px) {
+    .card-container{
+        flex-direction: column;
+        margin: 1em;
+    } 
+    
+    .portfolio-card{
+        width: 100%;
+        margin: 2em 0;
+    }
+}
+
+#contact{
+    display: flex;
+    margin-top: 5em;
+    width: 100%;
+    height: 100%;
+}
+
+#contact-section > h1{
+    font-size: 3em;
+    text-align: center;
+    margin: 2em;
+}
+#contact-text{
+    width: 50%;
+    padding: 0 7em;
+}
+
+#contact-text h1{
+    font-size: 2.8em;
+    margin-bottom: 0.7em;
+}
+
+#contact-text h3{
+    margin: 2em 0;
+}
+
+#contact-text h3 i{
+    color: var(--TextColor);
+    margin-right: 0.4em;
+}
+#contact-text a{
+    text-decoration: none;
+    color: white;
+}
+
+#contact-text a i{
+    margin-right: 1em;
+    font-size: 1.7em;
+    transition: 0.2s ease-in-out;
+    padding: 1em 0;
+}
+
+#contact-text a i:hover{
+    color: var(--TextColor);
+}
+#contact-text button{
+    display: block;
+    padding: 1.2em 1.7em;
+    background-color: var(--TextColor);
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    border: 2px solid black;
+    transition: 0.3s;
+    margin: 2em 0;    
+    cursor: pointer;
+}
+
+#contact-text button a{
+    text-decoration: none;
+    color: white;
+}
+
+#contact-text button:hover{
+    color: white;
+    background-color: black;
+    border: 2px solid var(--TextColor);
+}
+
+#contact-form{
+    width: 50%;
+}
+
+#contact-form input{
+    display: block;
+    width: 70%;
+    height: 15%;
+    background-color: rgb(51, 52, 53);
+    border: none;
+    outline: none;
+    margin: 1em 0;
+    border-radius: 0.3em;
+    padding: 0em 1em;
+    color: white;
+}
+
+
+#contact-form textarea{
+    width: 70%;
+    background-color: rgb(51, 52, 53);
+    border: none;
+    outline: none;
+    border-radius: 0.3em;
+    padding: 1em;
+    color: white;
+}
+
+#contact-form button{
+    display: block;
+    padding: 1.2em 3em;
+    background-color: var(--TextColor);
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    border: 2px solid black;
+    transition: 0.3s;
+    margin: 1em 0;
+    color: white;
+    cursor: pointer;
+}
+
+#contact-form button:hover{
+    background-color: black;
+    border: 2px solid var(--TextColor);
+}
+
+@media screen and (max-width:700px) {
+    #contact{
+        flex-direction: column;
+    } 
+    #contact-text{
+        width: 100%;
+        padding: 0 2em;
+    }
+#contact-form{
+    width: 100%;
+    padding: 1em;
+}
+    #contact-form input{
+        width: 100%;
+        padding: 1em;
+    }
+    #contact-form textarea{
+        width: 100%;
+    }
+    #contact-form button{
+        margin-left: 1em;
+    }
+}
+
+footer span{
+    color: var(--TextColor);
+}
+footer{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 5em;
+    padding: 1.4em 0;
+    font-size: 1.3em;
+    background-color: rgb(51, 52, 53);
+}
